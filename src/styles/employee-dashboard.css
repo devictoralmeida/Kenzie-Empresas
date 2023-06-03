@@ -1,0 +1,393 @@
+body {
+  overflow-x: hidden;
+}
+
+.header__container {
+  width: 100%;
+  height: 10%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-mode);
+}
+
+.header__mini-container {
+  width: 85%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__logout-button {
+  width: 142px;
+  height: 48px;
+  background-color: var(--color-mode);
+  border: 1px solid var(--color-brand-1);
+  color: var(--color-brand-1);
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 1.125rem;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.header__logout-button:hover {
+  background-color: var(--color-brand-1);
+  color: var(--color-mode);
+}
+
+.main__container {
+  width: 100%;
+  height: 80%;
+  margin-top: 8rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.main__mini-container {
+  width: 85%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.user-data__container {
+  width: 100%;
+  height: 100px;
+  padding: 1rem 0;
+  border: 1px solid #00000033;
+  background-color: var(--color-mode);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.username {
+  font-family: var(--font-family-1);
+  font-weight: 700;
+  font-size: 1.875rem;
+  color: var(--color-black);
+  margin-left: 1rem;
+}
+
+.email {
+  font-family: var(--font-family-1);
+  font-weight: var(--font-weight-3);
+  font-size: 1.375rem;
+  color: var(--color-black);
+  margin-left: 1rem;
+}
+
+.user-company__container {
+  width: 100%;
+  min-height: fit-content;
+  background-color: #f8f8f8;
+}
+
+.company__header {
+  width: 100%;
+  height: 78px;
+  background-color: var(--color-brand-1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.company__header > p {
+  font-family: var(--font-family-1);
+  font-weight: 700;
+  font-size: 2rem;
+  color: var(--color-mode);
+  text-align: center;
+}
+
+.company__employees-container {
+  width: 85%;
+  min-height: fit-content;
+  margin: 1.5rem auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-content: space-between;
+}
+
+.company__employee-name {
+  width: 300px;
+  height: 50px;
+  padding: 2rem;
+  margin: 0 3rem 2rem 3rem;
+  background-color: var(--color-mode);
+  border: 1px solid var(--color-brand-1);
+  font-family: var(--font-family-1);
+  font-weight: 700;
+  font-size: var(--font-title-1);
+  color: var(--color-black);
+  transition: 0.5s;
+}
+
+.company__employee-name:hover {
+  color: var(--color-brand-1);
+}
+
+.no-company {
+  height: 467px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--font-family-1);
+  font-weight: 700;
+  font-size: 3rem;
+  color: var(--color-black);
+}
+
+@media (max-width: 480px) {
+  .header__container {
+    width: 100vw;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+  }
+
+  .header__mini-container {
+    width: 90%;
+    height: 100%;
+  }
+
+  .header__right-container {
+    flex-direction: column;
+  }
+
+  .header__right-container button {
+    width: 100px;
+    height: 35px;
+    font-size: var(--font-text-1);
+  }
+
+  .main__container {
+    margin-top: 7rem;
+    width: 100vw;
+  }
+
+  .main__mini-container {
+    width: 90%;
+  }
+
+
+  .user-data__container {
+    padding: 0;
+    gap: 0.5rem;
+  }
+
+  .username {
+    font-size: var(--font-title-1);
+    margin-top: 1rem;
+  }
+
+  .email {
+    font-size: var(--font-title-2);
+    margin-bottom: 1rem;
+  }
+
+  .company__header  {
+    height: 50px;
+  }
+
+  .company__header p {
+    font-size: 1.5rem;
+  }
+
+  .company__employees-container {
+    margin: 0;
+    width: 100%;
+  }
+
+  .company__employee-name {
+    padding: 0;
+    width: 41%;
+    margin: 1rem;
+    font-size: var(--font-title-2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .no-company {
+    height: 150px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--font-family-1);
+    font-weight: 700;
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .header__container {
+    width: 100vw;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+  }
+
+  .header__mini-container {
+    width: 90%;
+    height: 100%;
+  }
+
+  .header__right-container {
+    flex-direction: column;
+  }
+
+  .header__right-container button {
+    width: 100px;
+    height: 35px;
+    font-size: var(--font-text-1);
+  }
+
+  .main__container {
+    margin-top: 8rem;
+    width: 100vw;
+  }
+
+  .main__mini-container {
+    width: 90%;
+  }
+
+
+  .user-data__container {
+    padding: 0;
+    gap: 0.5rem;
+  }
+
+  .username {
+    font-size: var(--font-title-1);
+    margin-top: 1rem;
+  }
+
+  .email {
+    font-size: var(--font-title-2);
+    margin-bottom: 1rem;
+  }
+
+  .company__header  {
+    height: 50px;
+  }
+
+  .company__header p {
+    font-size: 1.5rem;
+  }
+
+  .company__employees-container {
+    margin: 0;
+    width: 100%;
+  }
+
+  .company__employee-name {
+    padding: 0;
+    width: 28%;
+    margin: 1rem;
+    font-size: var(--font-title-2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .no-company {
+    height: 150px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--font-family-1);
+    font-weight: 700;
+    font-size: 2rem;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .header__container {
+    width: 100vw;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+  }
+
+  .header__mini-container {
+    width: 90%;
+    height: 100%;
+  }
+
+  .header__right-container {
+    flex-direction: column;
+  }
+
+  .header__right-container button {
+    width: 100px;
+    height: 35px;
+    font-size: var(--font-text-1);
+  }
+
+  .main__container {
+    margin-top: 10rem;
+    width: 100vw;
+  }
+
+  .main__mini-container {
+    width: 90%;
+  }
+
+
+  .user-data__container {
+    padding: 0;
+    gap: 0.5rem;
+  }
+
+  .username {
+    font-size: 1.5rem;
+    margin-top: 0.5rem;
+  }
+
+  .email {
+    font-size: var(--font-title-1);
+  }
+
+  .company__header  {
+    height: 70px;
+  }
+
+  .company__header p {
+    font-size: 1.75rem;
+  }
+
+  .company__employees-container {
+    margin: 0;
+    width: 100%;
+  }
+
+  .company__employee-name {
+    padding: 0;
+    width: 29%;
+    margin: 1rem;
+    font-size: var(--font-title-1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

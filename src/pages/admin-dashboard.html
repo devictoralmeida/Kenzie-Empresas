@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kenzie Empresas - Dashboard Administrador</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../styles/reset.css" />
+    <link rel="stylesheet" href="../styles/globalStyle.css" />
+    <link rel="stylesheet" href="../styles/admin-dashboard.css" />
+    <link rel="stylesheet" href="../styles/toast.css" />
+    <link rel="stylesheet" href="../styles/modal.css" />
+  </head>
+  <body>
+    <dialog class="modal-create-department__container">
+      <!-- <img src="../assets/close.svg" alt="Close button" class="close-modal">
+      <div class="modal-create__controller">
+        <h1 class="modal-title">Criar Departamento</h1>
+        <form class="form-create__container">
+          <input type="text" name="name" class="department-name department-add" required placeholder="Nome do departamento">
+          <input type="text" name="description" class="description department-add" required placeholder="Descrição">
+          <select name="company_id" class="select-input-create-modal department-add">
+            <option selected disabled>
+              Selecionar empresa
+            </option>
+          </select>
+          <button type="submit" class="submit-button">Criar</button>
+        </form>
+      </div> -->
+    </dialog>
+    <dialog class="modal-edit-department__container">
+      <!-- <img src="../assets/close.svg" alt="Close button" class="close-modal">
+      <div class="modal-edit-depart__controller">
+        <h1 class="modal-title">Editar Departamento</h1>
+        <form class="form-edit-department__container">
+          <textarea name="description" class="form-edit-department" placeholder="Escreva aqui a descrição do departamento"></textarea>
+        </form>
+        <button class="submit-edit-department-button">Salvar</button>
+      </div> -->
+    </dialog>
+    <dialog class="modal-remove-department__container">
+      <!-- <img src="../assets/close.svg" alt="Close button" class="close-modal">
+      <div class="modal-remove-depart__controller">
+        <h1 class="modal-remove-depart__title">Realmente deseja remover 
+        o 
+        <br>
+        Departamento NOME 
+        <br>
+        e demitir seus funcionários?</h1>
+        
+        <form class="form-remove-department__container">
+          <button type='submit' class="submit-remove-department-button">Remover</button>
+        </form>
+      </div> -->
+    </dialog>
+    <dialog class="modal-view-department__container">
+      <!-- <img src="../assets/close.svg" alt="Close button" class="close-modal">
+      <div class="modal-view__controller">
+        <h1 class="modal-title"></h1>
+        <h2></h2>
+        <h3></h3>
+        <form class="form-view__container">
+          <select class="select-input-view-modal">
+            <option selected disabled>
+              Selecionar usuário
+            </option>
+          </select>
+          <button class="submit-view-employee-button">Contratar</button>
+        </form>
+        <ul class="employees__container">
+          <li class="employee__card">
+            <h1>Username</h1>
+            <p>Company Name</p>
+            <button class="fire-employee">Desligar</button>
+          </li>
+          <li class="employee__card">
+            <h1>Username</h1>
+            <p>Company Name</p>
+            <button class="fire-employee">Desligar</button>
+          </li>
+          <li class="employee__card">
+            <h1>Username</h1>
+            <p>Company Name</p>
+            <button class="fire-employee">Desligar</button>
+          </li>
+          <li class="employee__card">
+            <h1>Username</h1>
+            <p>Company Name</p>
+            <button class="fire-employee">Desligar</button>
+          </li>
+        </ul>
+      </div> -->
+    </dialog>
+    <dialog class="modal-edit-employee__container">
+      <!-- <img src="../assets/close.svg" alt="Close button" class="close-modal">
+      <div class="modal-edit-employee__controller">
+        <h1 class="modal-title">Editar Usuário</h1>
+        <form class="form-edit-employee__container">
+          <input type="text" name="name" class="employee-name" required placeholder="Nome">
+          <input type="email" name="email" class="employee-mail" required placeholder="E-mail">
+          <button type="submit" class="submit-edit-employee-button">Salvar</button>
+        </form>
+      </div> -->
+    </dialog>
+    <dialog class="modal-remove-employee__container">
+      <!-- <img src="../assets/close.svg" alt="Close button" class="close-modal">
+      <div class="modal-remove-employee__controller">
+        <h1 class="modal-remove-employee__title">Realmente deseja remover 
+        o 
+        <br>
+        Usuário NOME?</h1>
+        <form class="modal-remove-employee-form">
+          <button class="submit-remove-employee-button">Remover</button>
+        </form>
+      </div> -->
+    </dialog>
+    <header class="header__container">
+      <div class="header__mini-container">
+        <img src="../assets/logo.svg" alt="Logo Kenzie Empresas" />
+        <button class="header__logout-button">Logout</button>
+      </div>
+    </header>
+    <main class="main__container">
+      <div class="main__mini-container">
+        <form class="form__container">
+          <select name="company" id="selectInput" class="select-input">
+            <option selected disabled>Selecionar Empresa</option>
+          </select>
+        </form>
+        <section class="filter-departments">
+          <header class="create-department">
+            <p>Departamentos</p>
+            <button class="create-company-button">+ Criar</button>
+          </header>
+          <ul class="departments__container">
+            <!-- <li class="department__item">
+              <div class="department__infos">
+                <p class="department-name-item">DepartamentoNome</p>
+                <p class="department-description-item">DepartamentoDescrição</p>
+                <p class="department-company">NomeCompanhia</p>
+              </div>
+              <div class="department__icons">
+                <img src="../assets/eye.svg" alt="Visualizar departamento" />
+                <img src="../assets/pen.svg" alt="Editar departamento" />
+                <img src="../assets/trash.svg" alt="Apagar departamento" />
+              </div>
+            </li>
+            <li class="department__item">
+              <div class="department__infos">
+                <p class="department-name-item">DepartamentoNome</p>
+                <p class="department-description-item">DepartamentoDescrição</p>
+                <p class="department-company">NomeCompanhia</p>
+              </div>
+              <div class="department__icons">
+                <img src="../assets/eye.svg" alt="Visualizar departamento" />
+                <img src="../assets/pen.svg" alt="Editar departamento" />
+                <img src="../assets/trash.svg" alt="Apagar departamento" />
+              </div>
+            </li>
+            <li class="department__item">
+              <div class="department__infos">
+                <p class="department-name-item">DepartamentoNome</p>
+                <p class="department-description-item">DepartamentoDescrição</p>
+                <p class="department-company">NomeCompanhia</p>
+              </div>
+              <div class="department__icons">
+                <img src="../assets/eye.svg" alt="Visualizar departamento" />
+                <img src="../assets/pen.svg" alt="Editar departamento" />
+                <img src="../assets/trash.svg" alt="Apagar departamento" />
+              </div>
+            </li>
+            <li class="department__item">
+              <div class="department__infos">
+                <p class="department-name-item">DepartamentoNome</p>
+                <p class="department-description-item">DepartamentoDescrição</p>
+                <p class="department-company">NomeCompanhia</p>
+              </div>
+              <div class="department__icons">
+                <img src="../assets/eye.svg" alt="Visualizar departamento" />
+                <img src="../assets/pen.svg" alt="Editar departamento" />
+                <img src="../assets/trash.svg" alt="Apagar departamento" />
+              </div>
+            </li>
+            <li class="department__item">
+              <div class="department__infos">
+                <p class="department-name-item">DepartamentoNome</p>
+                <p class="department-description-item">DepartamentoDescrição</p>
+                <p class="department-company">NomeCompanhia</p>
+              </div>
+              <div class="department__icons">
+                <img src="../assets/eye.svg" alt="Visualizar departamento" />
+                <img src="../assets/pen.svg" alt="Editar departamento" />
+                <img src="../assets/trash.svg" alt="Apagar departamento" />
+              </div>
+            </li> -->
+          </ul>
+        </section>
+        <p class="register-users">Usuários cadastrados</p>
+        <ul class="users__container">
+          <!-- <li class="user__item">
+            <div class="user__infos">
+              <p class="user-name">Username</p>
+              <p class="user-company">NomeCompanhia</p>
+            </div>
+            <div class="user__icons">
+              <img src="../assets/pen.svg" alt="Editar departamento" />
+              <img src="../assets/trash.svg" alt="Apagar departamento" />
+            </div>
+          </li>
+          <li class="user__item">
+            <div class="user__infos">
+              <p class="user-name">Username</p>
+              <p class="user-company">NomeCompanhia</p>
+            </div>
+            <div class="user__icons">
+              <img src="../assets/pen.svg" alt="Editar departamento" />
+              <img src="../assets/trash.svg" alt="Apagar departamento" />
+            </div>
+          </li>
+          <li class="user__item">
+            <div class="user__infos">
+              <p class="user-name">Username</p>
+              <p class="user-company">NomeCompanhia</p>
+            </div>
+            <div class="user__icons">
+              <img src="../assets/pen.svg" alt="Editar departamento" />
+              <img src="../assets/trash.svg" alt="Apagar departamento" />
+            </div>
+          </li>
+          <li class="user__item">
+            <div class="user__infos">
+              <p class="user-name">Username</p>
+              <p class="user-company">NomeCompanhia</p>
+            </div>
+            <div class="user__icons">
+              <img src="../assets/pen.svg" alt="Editar departamento" />
+              <img src="../assets/trash.svg" alt="Apagar departamento" />
+            </div>
+          </li>
+          <li class="user__item">
+            <div class="user__infos">
+              <p class="user-name">Username</p>
+              <p class="user-company">NomeCompanhia</p>
+            </div>
+            <div class="user__icons">
+              <img src="../assets/pen.svg" alt="Editar departamento" />
+              <img src="../assets/trash.svg" alt="Apagar departamento" />
+            </div>
+          </li> -->
+        </ul>
+      </div>
+    </main>
+    <div class="toast__container hidden">
+      <p></p>
+    </div>
+    <script type="module" src="../scripts/admin.js"></script>
+  </body>
+</html>

@@ -1,0 +1,514 @@
+body {
+  box-sizing: border-box;
+}
+
+.modal-create-department__container {
+  border: 1px solid #0000004d;
+  padding: 0;
+  height: 402px;
+  width: 506px;
+  outline: none;
+}
+
+.modal-edit-department__container {
+  border: 1px solid #0000004d;
+  height: 330px;
+  padding: 0;
+  width: 506px;
+  outline: none;
+}
+
+.modal-remove-department__container {
+  border: 1px solid #0000004d;
+  height: 342px;
+  padding: 0;
+  width: 700px;
+  outline: none;
+}
+
+.modal-view-department__container {
+  border: 1px solid #0000004d;
+  height: 580px;
+  padding: 0;
+  width: 857px;
+  outline: none;
+}
+
+.modal-edit-employee__container {
+  border: 1px solid #0000004d;
+  height: 359px;
+  padding: 0;
+  width: 506px;
+  outline: none;
+}
+
+.modal-remove-employee__container {
+  border: 1px solid #0000004d;
+  height: 292px;
+  padding: 0;
+  width: 733px;
+  outline: none;
+}
+
+.modal-create__controller {
+  height: 100%;
+  width: 450px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.modal-edit-depart__controller {
+  height: 100%;
+  width: 422px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.modal-remove-depart__controller {
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-view__controller {
+  height: 100%;
+  width: 775px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 0 auto;
+}
+
+.modal-edit-employee__controller {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  gap: 1rem;
+}
+
+.modal-remove-depart__controller,
+.modal-remove-employee__controller {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin: 0 auto;
+}
+
+.close-modal {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  cursor: pointer;
+}
+
+.modal-title {
+  color: var(--color-black);
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 2.25rem;
+  line-height: 150%;
+}
+
+.modal-remove-depart__title,
+.modal-remove-employee__title {
+  color: var(--color-black);
+  width: 100%;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 1.75rem;
+  line-height: 150%;
+  text-align: center;
+}
+
+.modal-edit-employee__controller > .modal-title,
+.modal-edit-depart__controller > .modal-title {
+  align-self: flex-start;
+  margin-left: 0rem;
+}
+
+.modal-edit-employee__controller > .modal-title {
+  align-self: flex-start;
+  margin-left: 2rem;
+}
+
+.modal-create__controller > .modal-title {
+  margin: 1rem 0rem;
+}
+
+.modal-view__controller > .modal-title {
+  margin-top: 2rem;
+}
+
+.modal-view__controller > h2 {
+  color: var(--color-black);
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: var(--font-title-1);
+  margin-left: 0;
+  line-height: 150%;
+}
+
+.modal-view__controller > h3 {
+  color: var(--color-black);
+  font-family: "Poppins", sans-serif;
+  font-weight: var(--font-weight-3);
+  font-size: 1.125rem;
+  margin-left: 0;
+  line-height: 150%;
+}
+
+.modal-remove-depart__controller > .modal-title {
+  text-align: center;
+  width: 598px;
+  margin-left: 0;
+}
+
+.form-create__container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form-edit-employee__container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form-view__container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.department-name,
+.description {
+  width: 422px;
+  height: 52px;
+  outline: none;
+  padding-left: 1rem;
+  border: 1px solid #0000004d;
+  transition: 0.5s;
+}
+
+.department-name:focus,
+.description:focus,
+.form-edit-department:focus,
+.employee-name:focus,
+.employee-mail:focus {
+  border: 1px solid var(--color-brand-2);
+}
+
+.employee-name,
+.employee-mail {
+  width: 422px;
+  height: 52px;
+  padding-left: 1rem;
+  outline: none;
+  border: 1px solid #0000004d;
+  transition: 0.5s;
+}
+
+.department-name::placeholder,
+.description::placeholder,
+.form-edit-department::placeholder,
+.employee-name::placeholder,
+.employee-mail::placeholder,
+.employee-password::placeholder,
+.department-name,
+.description,
+.form-edit-department,
+.employee-name,
+.employee-mail,
+.employee-password {
+  color: #00000080;
+  font-family: var(--font-family-1);
+  font-weight: var(--font-weight-3);
+  font-size: var(--font-title-2);
+}
+
+.form-edit-department__container {
+  display: flex;
+  width: 422px;
+  height: 113px;
+  flex-direction: column;
+}
+
+.form-edit-department {
+  border: 1px solid #0000004d;
+  height: 100px;
+  width: 400px;
+  padding-left: 1rem;
+  padding-top: 1rem;
+  outline: none;
+}
+
+.select-input-create-modal {
+  width: 442px;
+  height: 52px;
+  padding-left: 1rem;
+  border: 1px solid #0000004d;
+  color: #00000080;
+  outline: none;
+  font-family: var(--font-family-1);
+  font-weight: var(--font-weight-3);
+  font-size: var(--font-title-2);
+  cursor: pointer;
+}
+
+.select-input-create-modal option,
+.select-input-view-modal option {
+  background-color: var(--color-mode);
+  color: #00000080;
+  font-family: var(--font-family-1);
+  font-weight: var(--font-weight-3);
+  font-size: var(--font-title-2);
+}
+
+.select-input-view-modal {
+  width: 560px;
+  height: 52px;
+  padding-left: 0.5rem;
+  border: 1px solid #0000004d;
+  color: #00000080;
+  outline: none;
+  font-family: var(--font-family-1);
+  font-weight: var(--font-weight-3);
+  font-size: var(--font-title-2);
+  cursor: pointer;
+}
+
+.submit-button,
+.modal-edit-department__container button {
+  min-height: 48px;
+  font-family: var(--font-family-1);
+  font-weight: 700;
+  font-size: 1.125rem;
+  text-align: center;
+  background-color: var(--color-action-1);
+  color: var(--color-mode);
+  cursor: pointer;
+  border: none;
+  transition: 0.5s;
+}
+
+.submit-button {
+  width: 442px;
+}
+
+.submit-button:hover .submit-edit-employee-button:hover,
+.modal-edit-department__container button:hover,
+.submit-edit-employee-button:hover,
+.submit-view-employee-button:hover {
+  background-color: rgba(45, 180, 45, 0.767);
+}
+
+.modal-edit-department__container button {
+  min-width: 100%;
+}
+
+.submit-view-employee-button {
+  min-height: 52px;
+  width: 190px;
+  font-family: var(--font-family-1);
+  font-weight: 700;
+  font-size: 1.125rem;
+  text-align: center;
+  background-color: var(--color-action-1);
+  color: var(--color-mode);
+  cursor: pointer;
+  border: none;
+  transition: 0.5s;
+}
+
+.submit-edit-employee-button {
+  min-height: 48px;
+  width: 442px;
+  font-family: var(--font-family-1);
+  font-weight: 700;
+  font-size: 1.125rem;
+  text-align: center;
+  background-color: var(--color-action-1);
+  color: var(--color-mode);
+  cursor: pointer;
+  border: none;
+  transition: 0.5s;
+}
+
+.employees__container {
+  width: 775px;
+  height: 290px;
+  overflow-x: auto;
+  background-color: #f8f8f8;
+  display: flex;
+  align-items: center;
+  margin-top: 0.5rem;
+}
+
+.employee__card {
+  width: 306px;
+  height: 196px;
+  border-bottom: 1px solid var(--color-brand-1);
+  border-top: 1px solid transparent;
+  border-left: 1px solid transparent;
+  border-right: 1px solid transparent;
+  background-color: var(--color-mode);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 2rem;
+  transition: 0.5s;
+}
+
+.employee__card:hover {
+  border: 1px solid var(--color-action-2);
+}
+
+.employee__card > h1 {
+  color: var(--color-black);
+  font-family: var(--font-family-1);
+  font-weight: 700;
+  font-size: var(--font-title-1);
+  margin-top: 1rem;
+}
+
+.employee__card > p {
+  color: var(--color-black);
+  font-family: var(--font-family-1);
+  font-weight: var(--font-weight-3);
+  font-size: 1.125rem;
+  margin-top: 0.5rem;
+}
+
+.fire-employee {
+  min-height: 48px;
+  width: 250px;
+  font-family: var(--font-family-1);
+  font-weight: 700;
+  font-size: 1.125rem;
+  text-align: center;
+  background-color: var(--color-mode);
+  border: 1px solid var(--color-action-2);
+  color: var(--color-action-2);
+  cursor: pointer;
+  margin-top: 3.5rem;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+  transition: 0.6s;
+}
+
+.fire-employee:hover {
+  color: var(--color-mode);
+  background-color: var(--color-action-2);
+}
+
+.submit-remove-department-button,
+.submit-remove-employee-button {
+  min-height: 48px;
+  width: 422px;
+  font-family: var(--font-family-1);
+  font-weight: 700;
+  font-size: 1.125rem;
+  text-align: center;
+  background-color: var(--color-action-2);
+  border: none;
+  color: var(--color-mode);
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.submit-remove-department-button:hover,
+.submit-remove-employee-button:hover {
+  background-color: #ff2f00;
+}
+
+.employees__container > h1 {
+  color: var(--color-black);
+  width: 100%;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: var(--font-title-2);
+  line-height: 150%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.users__container > h1 {
+  color: var(--color-black);
+  width: 100%;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: var(--font-title-1);
+  line-height: 150%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+::-webkit-scrollbar {
+  height: 9px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--color-gray-5);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--color-brand-1);
+}
+
+img {
+  transition: 0.5s;
+}
+
+img:hover {
+  transform: scale(1.2);
+}
+
+@media (max-width: 480px) {
+  .modal-edit-department__container {
+    width: 420px;
+  }
+
+  .modal-edit-depart__controller {
+    width: 350px;
+  }
+
+  .modal-title {
+    font-size: 1.5rem;
+  }
+
+  .form-edit-department__container {
+    max-width: 350px;
+  }
+
+  .form-edit-department {
+    width: 330px;
+    padding-left: 1rem;
+    padding-top: 1rem;
+  }
+
+  .modal-edit-depart__controller button {
+    font-size: var(--font-title-2);
+  }
+}

@@ -1,0 +1,37 @@
+:root {
+  --color-brand-1: #0000ff;
+  --color-brand-2: #3532ff;
+
+  --color-action-1: #36b37e;
+  --color-action-2: #ff5630;
+  --color-action-3: #ffab00;
+
+  --color-mode: #ffffff;
+  --color-gray-1: #212529;
+  --color-gray-2: #495057;
+  --color-gray-3: #adb5bd;
+  --color-gray-4: #e9ecef;
+  --color-gray-5: #f1f3f5;
+  --color-black: #000000;
+
+  --font-family-1: "Inter", sans-serif;
+
+  --font-title-1: 1.25rem;
+  --font-title-2: 1rem;
+  --font-text-1: 0.875rem;
+  --font-text-2: 0.75rem;
+
+  --font-weight-1: 600;
+  --font-weight-2: 500;
+  --font-weight-3: 400;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  box-sizing: border-box;
+  font-family: var(--font-family-1);
+  padding: 0;
+  margin: 0;
+  line-height: 150%;
+}
